@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rap Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rap Name Generator</h1>
+        <input type="text" id="name" placeholder="What is your name?">
+        <input type="text" id="city" placeholder="What city were you born in?">
+        <input type="text" id="color" placeholder="What is your favorite color?">
+        <button onclick="generateRapName()">Generate Rap Name</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function generateRapName() {
+            var var1 = document.getElementById('name').value;
+            var var2 = document.getElementById('city').value;
+            var var3 = document.getElementById('color').value;
+
+            if (var1 && var2 && var3) {
+                document.getElementById('result').textContent = "Your rap name is: " + var1 + " " + var2;
+            } else {
+                document.getElementById('result').textContent = "Please fill out all fields.";
+            }
+        }
+    </script>
+</body>
+</html>
